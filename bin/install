@@ -36,7 +36,7 @@ abort() {
 }
 
 #
-# require npm
+# require
 #
 
 command -v npm > /dev/null || abort "npm not found"
@@ -282,7 +282,7 @@ install_appium() {
   cd $dir
 
   log install $version
-  npm install appium@$version
+  npm install appium@$version --unsafe-perm=true --allow-root
   if [ $? -ne 0 ]; then
     log rm $dir
     rm -R $dir
