@@ -236,7 +236,8 @@ activate() {
     echo $active > $VERSIONS_DIR/.prev
     mkdir -p $AVM_PREFIX/bin
     rm -f $AVM_PREFIX/bin/appium
-    ln -s $dir/node_modules/appium/$APPIUM_BIN $AVM_PREFIX/bin/appium
+    #ln -s $dir/node_modules/appium/$APPIUM_BIN $AVM_PREFIX/bin/appium
+    local bin=$VERSIONS_DIR/$version/node_modules/appium/bin/appium.js
   fi
 }
 
